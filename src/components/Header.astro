@@ -1,0 +1,48 @@
+---
+interface Props {
+  exportDate: string;
+  perplexityUrl: string;
+  saveMyChatbotUrl: string;
+}
+
+const { exportDate, perplexityUrl, saveMyChatbotUrl } = Astro.props;
+---
+
+<header class="header">
+  <h1 class="title">Smart vs. Bidirectional EV Charging</h1>
+  <p class="export-info">
+    Exported on {exportDate} 
+    <a href={perplexityUrl}>from Perplexity Pages</a> - 
+    with <a href={saveMyChatbotUrl}>SaveMyChatbot</a>
+  </p>
+</header>
+
+<style>
+  .header {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .export-info {
+    color: #718096;
+    font-size: 0.875rem;
+  }
+
+  a {
+    color: #4299e1;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: #2b6cb0;
+  }
+</style>
